@@ -1,0 +1,32 @@
+.donate-link {
+    font-size: 20px;
+    color: #ff914d;
+    text-decoration: none;
+}
+
+.my-funds-link {
+    color: #ff914d;
+    font-size: 18px;
+    text-decoration: underline;
+    padding: 0 5px;
+}
+
+.btn-disabled {
+    background-color: #6e5647;
+    color: #fff;
+    cursor: not-allowed;
+    &:hover {
+        background-color: #6e5647;
+        cursor: not-allowed;
+    }
+}
+
+.btn-enabled {
+    background-color: #ff914d;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: #ff914d;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,9 @@
+.nav-link {
+    border-bottom: 1px solid #fff;
+}
+
+.nav-link.router-link-active {
+    font-weight: bold;
+    color: #ff914d;
+    border-bottom: 1px solid #ff914d;
+  }
