@@ -105,7 +105,7 @@ export function CampaignDetails() {
         address: CHARITY_FUNDRAISER_CONTRACT_ADDRESS,
         functionName: "getCampaignDetails",
         abi: charityFundRaiserContractABI as any,
-        args: [campaignId],
+        args: [campaignId, address as any],
       },
     ],
     watch: true,
@@ -143,6 +143,7 @@ export function CampaignDetails() {
     Number(result?.[0]?.result?.toString()) / 10 ** 18 == 0;
 
   const campaignDetails = result?.[1]?.result as any;
+  console.log({ campaignDetails });
   const goalAmount = Number(campaignDetails?.goalAmount?.toString()) / 10 ** 18;
   const raisedAmount =
     Number(campaignDetails?.raisedAmount?.toString()) / 10 ** 18;

@@ -69,7 +69,7 @@ export const charityFundRaiserContractABI = [
     type: "function",
   },
   {
-    inputs: [],
+    inputs: [{ internalType: "address", name: "_viewer", type: "address" }],
     name: "getAllCampaigns",
     outputs: [
       {
@@ -103,7 +103,10 @@ export const charityFundRaiserContractABI = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "_campaignId", type: "uint256" }],
+    inputs: [
+      { internalType: "uint256", name: "_campaignId", type: "uint256" },
+      { internalType: "address", name: "_viewer", type: "address" },
+    ],
     name: "getCampaignDetails",
     outputs: [
       {

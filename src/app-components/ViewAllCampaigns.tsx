@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import "./components.css";
-import { useContractReads } from "wagmi";
+import { useAccount, useContractReads } from "wagmi";
 import { CHARITY_FUNDRAISER_CONTRACT_ADDRESS } from "./contracts";
 import { charityFundRaiserContractABI } from "../ABIs/CharityFundRaiserContractABI";
 
@@ -36,12 +36,14 @@ const CampaignsRowItem = styled.div`
 `;
 
 function ViewAllCampaigns() {
+  const { address } = useAccount();
   const { data: result, isLoading } = useContractReads({
     contracts: [
       {
         address: CHARITY_FUNDRAISER_CONTRACT_ADDRESS,
         functionName: "getAllCampaigns",
         abi: charityFundRaiserContractABI as any,
+        args: [address as any],
       },
     ],
     watch: true,
