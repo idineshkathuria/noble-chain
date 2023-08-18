@@ -132,7 +132,7 @@ export const MyFunds = () => {
             <MyFundsHeaderItem>Actions</MyFundsHeaderItem>
           </MyFundsHeader>
           <MyFundsRow>
-            <MyFundsRowItem>Charity Token (CT)</MyFundsRowItem>
+            <MyFundsRowItem>Charitable Token (CHT)</MyFundsRowItem>
             <MyFundsRowItem>{balanceRetrieved}</MyFundsRowItem>
             <MyFundsRowItem>{allowedToTransfer ? "Yes" : "No"}</MyFundsRowItem>
             <MyFundsRowItem>
