@@ -12,6 +12,11 @@ export default defineConfig({
       util: "util",
     },
   },
+  build: {
+    rollupOptions: {
+      external: ["@safe-globalThis/*"],
+    },
+  },
   plugins: [react()],
   base: "/noble-chain/",
 });
